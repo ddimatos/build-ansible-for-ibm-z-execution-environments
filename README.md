@@ -345,7 +345,13 @@ The playbook will issue two pings, one from `ansible.builtin` and one from the `
 ## Run the playbook with the execution environment
 command:
 ``` shell
-ansible-navigator run test.yml -i inventory -m stdout
+ansible-navigator run test.yml -i inventory.yml -m stdout
+```
+
+Optionally if you would like verbose:
+command:
+``` shell
+ansible-navigator run test.yml -i inventory.yml -m stdout -vvvv
 ```
 
 Note, in the event you encounter a similar error 'hostkeys_find: found ssh-ed25519 key under different name/addr at /root/.ssh/known_hosts', it means the SSH client has found an SSH host key for a server (specifically an ssh-ed25519 key) in your known_hosts file, but this key is associated with a different hostname or IP address than the one you are currently trying to connect to. You can add your SHH key to the agent with the following commands.
