@@ -265,9 +265,9 @@ pip3 install ansible-navigator
 Create files with commands:
 
 ``` shell
-touch ibm-zos-ee/ansible-navigator.yml
-touch ibm-zos-ee/inventory.yml
-touch ibm-zos-ee/test.yml
+touch ibm-zos-ee/ansible-navigator.yml;
+touch ibm-zos-ee/inventory.yml;
+touch ibm-zos-ee/test.yml;
 ```
 
 Populate file  `ibm-zos-ee/ansible-navigator.yml` , with this content which informs `ansible-navigator` to use the local container at `localhost/ddimatos/ibm-zos-core-ee:latest` when running a playbook with the execution environment.
