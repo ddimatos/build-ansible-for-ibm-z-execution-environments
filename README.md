@@ -201,6 +201,17 @@ Run `ansible-builder` with added verbosity level 3. Verbosity is not required an
 ansible-builder build --tag ddimatos/ibm-zos-ee -v 3
 ```
 
+Note: You may run into the below error when ansible-builder connects to the Red Hat Container Registry and tries to authenticate.
+```
+Error: creating build container: initializing source docker://registry.redhat.io/ansible-automation-platform-25/ee-minimal-rhel9:latest: unable to retrieve auth token: invalid username/password: unauthorized: Please login to the Red Hat Registry using your Customer Portal credentials. Further instructions can be found here: https://access.redhat.com/RegistryAuthentication
+```
+For this error, authenticate first:
+```
+podman login registry.redhat.io
+Username: <user>
+Password: <password>
+Login Succeeded!
+```
 You should see the build complete with the message below.
 
 ``` sh
